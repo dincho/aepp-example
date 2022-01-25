@@ -6,23 +6,18 @@ const RECIPIENT_ADDRESS = 'ak_dvNHMgVvdSgDchLsmcUpuFTbMBGfG3E5V9KZnNjLYPyEhcqnL'
 const initSimpleSdk = async () => {
   const nodes = [
       { name: 'testnet', instance: await Ae.Node({ url: TESTNET_NODE_URL })},
-      // { name: 'mainnet', instance: await Ae.Node({ url: MAINNET_NODE_URL })}
+      { name: 'mainnet', instance: await Ae.Node({ url: MAINNET_NODE_URL })}
   ]
 
   return await Ae.Universal({nodes})
 }
 
 const initRpcApp = async () => {
-  const nodes = [
-      // { name: 'mainnet', instance: await Ae.Node({ url: MAINNET_NODE_URL })},
-      { name: 'testnet', instance: await Ae.Node({ url: TESTNET_NODE_URL })}
-  ]
-
   const sdk = await Ae.RpcAepp({
     name: 'Example wallet æpp',
     nodes: [
-      // { name: 'mainnet', instance: await Ae.Node({ url: MAINNET_NODE_URL }) },
-      { name: 'testnet', instance: await Ae.Node({ url: TESTNET_NODE_URL }) }
+      { name: 'testnet', instance: await Ae.Node({ url: TESTNET_NODE_URL }) },
+      { name: 'mainnet', instance: await Ae.Node({ url: MAINNET_NODE_URL }) }
     ],
     compilerUrl: COMPILER_URL,
     onNetworkChange: ({ networkId }) => {
