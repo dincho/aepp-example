@@ -1,0 +1,4 @@
+- [unpkg example](https://github.com/aeternity/aepp-sdk-js/blob/develop/docs/index.md)
+- [wallet connection simple](https://github.com/aeternity/aepp-sdk-js/blob/master/docs/guides/connect-aepp-to-wallet.md)
+- [wallet connection vue](https://github.com/aeternity/aepp-sdk-js/blob/develop/examples/browser/aepp/src/Connect.vue)
+- serve this with `python3 -m http.server` because the wallet connection is checking for http protocol for some reason
